@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+@layer utilities {
+  .border-bottom-gradient {
+    @apply relative inline-block;
+  }
+
+  .border-bottom-gradient::after {
+    content: '';
+    @apply absolute bottom-0 left-0 w-full h-[0.6px]; 
+    background: linear-gradient(to right, rgba(223,227,232, 0.2), rgba(223,227,232,255), rgba(223,227,232, 0.2));
+  }
+}
+
+.shadow {
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}

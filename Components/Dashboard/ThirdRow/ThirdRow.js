@@ -3,17 +3,17 @@ import React from 'react'
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Area, AreaChart, defs, BarChart, Legend, Bar } from 'recharts';
 import { FaArrowUp } from "react-icons/fa";
 import { activeUsersStats, dataDashboardGraphs } from '@/constants';
-import { ImUsers } from "react-icons/im";
-import ProgressBar from '@/Components/ProgressBar/ProgressBar';
 import { nanoid } from 'nanoid';
+import Boxes from './Boxes/Boxes';
 
 const ThirdRow = () => {
   return (
-    <div className='flex gap-5 w-full min-h-[445px]'>
+    <div className='flex flex-col lg:flex-row gap-5 w-full min-h-[445px]'>
         
         {/* First Box */}
-        <div className='p-4 bg-white rounded-xl shadow w-2/5'>
+        <div className='p-4 bg-white rounded-xl shadow w-full lg:w-2/5'>
           
+          {/* Graph */}
           <div className='h-[210px] w-full bg-gradient-to-r rounded-lg from-[#39406d] to-[#1a1e33]'>
             <ResponsiveContainer width="100%" height="100%">
               <BarChart
@@ -35,23 +35,15 @@ const ThirdRow = () => {
             </ResponsiveContainer>
           </div>
           
+          {/* Down section */}
           <div className='ml-2'>
             <p className='text-[#344767] mt-7 font-semibold'>Active Users</p>
             <p className='text-gray-200 text-sm'>(<span className='font-semibold'>+23%</span>) than last week</p>
             
-            <div className='flex'>
+            <div className='flex max-sm:flex-wrap'>
               
               {activeUsersStats.map(item => (
-                <div key={nanoid()} className='mt-7 pr-10 grow'>
-                  <div className='flex items-center gap-2 mb-4'>
-                    <div style={{backgroundImage: `linear-gradient(to right, ${item.gradientFrom}, ${item.gradientTo})`}} className={`p-1 rounded-md text-white`}>
-                      <ImUsers className='text-sm' />
-                    </div>
-                    <p className='text-gray-100 text-sm font-medium'>{item.category}</p>
-                  </div>
-                  <p className='text-2xl font-bold text-gray-200'>{item.value}</p>
-                  <ProgressBar progress={item.progress} />
-                </div>
+                <Boxes key={nanoid()} props={item} />
               ))}
             </div>
 
@@ -59,8 +51,9 @@ const ThirdRow = () => {
         </div>   
         
         {/* Second Box */}
-        <div className='py-6 px-5 flex flex-col bg-white rounded-xl shadow w-3/5'>
+        <div className='py-6 px-5 flex flex-col bg-white rounded-xl shadow w-full lg:w-3/5'>
           
+          {/* Text section */}
           <div className='mb-8'>
             <p className='text-[#344767] mb-2 font-semibold'>Sales Overview</p>
             <div className='flex text-sm items-center gap-1 text-[#82D616]'>
@@ -69,8 +62,9 @@ const ThirdRow = () => {
             </div>
           </div>
           
-          <div className='flex-grow'>
-            <ResponsiveContainer width="100%" height='100%'>
+          {/* Graph section */}
+          <div className='flex-grow '>
+            <ResponsiveContainer width="100%" height='100%' minHeight={'200px'}>
                 <AreaChart
                 data={dataDashboardGraphs}
                 margin={{

@@ -7,14 +7,15 @@ import Links from '@/Components/LeftPanel/Links/Links'
 import { FaStar } from "react-icons/fa";
 import { nanoid } from 'nanoid'
 
-const LeftPanel = () => {
+const LeftPanel = ({showLeftPanel}) => {
 
   return (
-    <div className='py-10 px-8 h-screen sticky z-30 top-0'>
+    <div className={`py-10 px-8 bg-[#f8f9fa] bg-opacity-85 backdrop-blur-lg shadow-2xl  h-screen transform transition-transform duration-300 ease-in-out ${showLeftPanel ? 'translate-x-0' : '-translate-x-full'} 
+    xl:shadow-none xl:bg-opacity-100 xl:bg-transparent xl:backdrop-blur-none xl:block xl:sticky z-30 top-0 xl:translate-x-0`}>
       <div className='flex flex-col w-[220px] box-content h-full'>
         {/* LOGO */}
         <div className='border-bottom-gradient flex justify-center pb-7 w-full'>
-          <div className='flex ml-4 items-center gap-1'>
+          <div className='flex ml-4 items-center gap-1'>  
             <Image 
                 alt=''
                 src={logo}

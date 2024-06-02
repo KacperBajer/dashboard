@@ -24,3 +24,29 @@
 .shadow {
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
+/* Hide scrollbar for Chrome, Safari and Opera */
+.hideScrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.hideScrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+.margin-inline {
+  margin-inline-start: auto;
+  margin-inline-end: auto;
+}
+
+.verticalLine {
+  @apply relative inline-block text-2xl;
+}
+
+.verticalLine::after {
+  content: '';
+  @apply block my-1 w-0.5 h-6 bg-[#DEE2E6] absolute;
+  top: 20px; /* Position the line below the icon */
+  left: 50%;
+  transform: translateX(-50%);
+}

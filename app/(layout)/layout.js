@@ -1,4 +1,5 @@
 'use client'
+import Footer from '@/Components/Footer/Footer'
 import LeftPanel from '@/Components/LeftPanel/LeftPanel'
 import TopNav from '@/Components/TopNav/TopNav'
 import React, { useState } from 'react'
@@ -16,6 +17,7 @@ const layout = ({children}) => {
       <div className='px-6 overflow-x-auto w-full h-full'>
         <TopNav setShowLeftPanel={setShowLeftPanel} />
         {children}
+        <Footer />
       </div>
     </div>
   )

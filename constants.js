@@ -143,7 +143,6 @@ export const activeUsersStats = [
 ]
 
 export const TableDashboardData = {
-    headers: [{name: 'COMPANIES', justify: 'left'}, {name: 'MEMBERS', justify: 'left'}, {name: 'BUDGET', justify: 'center'}, {name: 'COMPLETION', justify: 'center'}],
     data: [
       {
         company: { icon: xd, name: "Soft UI XD Version" },
@@ -191,4 +190,76 @@ export const dashboardLogs = [
   {title: 'New card added for order #4395133', description: '20 DEC 2:20 AM', icon: <FaCreditCard style={{color: '#f77936'}} className="text-lg " />},
   {title: 'New card added for order #4395133', description: '18 DEC 4:54 AM', icon: <FaKey style={{color: '#c017a5'}} className="text-lg " />},
   {title: 'New order #9583120', description: '17 DEC', icon: <MdAttachMoney style={{color: '#282d4b'}} className="text-lg " />},
+]
+
+export const SecondTableData = [
+  {
+    company: { icon: xd, name: "Soft UI XD Version" },
+    status: 'working',
+    budget: "$14,000",
+    completion: { value: '50', gradientFrom: '#21ccfe', gradientTo: '#215aff' }
+  },
+  {
+    company: { icon: atlassian, name: "Add Progress Track" },
+    status: 'working',
+    budget: "$3,000",
+    completion: { value: '15', gradientFrom: '#21ccfe', gradientTo: '#215aff' }
+  },
+  {
+    company: { icon: slack, name: "Fix Platform Errors" },
+    status: 'done',
+    budget: "Not set",
+    completion: { value: '100', gradientFrom: '#93ea2e', gradientTo: '#1db037' }
+  },
+  {
+    company: { icon: spotify, name: "Launch our Mobile App" },
+    status: 'done',
+    budget: "$20,500",
+    completion: { value: '100', gradientFrom: '#93ea2e', gradientTo: '#1db037' }
+  },
+  {
+    company: { icon: jira, name: "Add the New Pricing Page" },
+    status: 'canceled',
+    budget: "$500",
+    completion: { value: '30', gradientFrom: '#21ccfe', gradientTo: '#215aff' }
+  },
+  {
+    company: { icon: invision, name: "Redesign New Online Shop" },
+    status: 'working',
+    budget: "$2,000",
+    completion: { value: '40', gradientFrom: '#21ccfe', gradientTo: '#215aff' }
+  }
+]
+
+export const FirstTableData = [
+  {
+    author: { icon: team1, email: 'john@creative-tim.com', name: "John Michael" },
+    status: 'ONLINE',
+    employed: "23/04/18",
+    function: { position: 'Manager', subPosition: 'Organizator' }
+  },
+  {
+    author: { icon: team2, email: 'alexa@creative-tim.com', name: "Alexa Liras" },
+    status: 'OFFLINE',
+    employed: "11/01/19",
+    function: { position: 'Programator', subPosition: 'Developer' }
+  },
+  {
+    author: { icon: team3, email: 'laurent@creative-tim.com', name: "Laurent Perrier" },
+    status: 'ONLINE',
+    employed: "19/09/17",
+    function: { position: 'Executive', subPosition: 'Projects' }
+  },
+  {
+    author: { icon: team2, email: 'michael@creative-tim.com', name: "Michael Levi" },
+    status: 'ONLINE',
+    employed: "24/12/08",
+    function: { position: 'Programator', subPosition: 'Developer' }
+  },
+  {
+    author: { icon: team3, email: 'richard@creative-tim.com', name: "Richard Gran" },
+    status: 'OFFLINE',
+    employed: "04/10/21",
+    function: { position: 'Manager', subPosition: 'Executive' }
+  },
 ]

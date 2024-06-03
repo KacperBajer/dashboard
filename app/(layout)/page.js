@@ -9,7 +9,7 @@ import FourthRow from "@/Components/Dashboard/FourthRow/FourthRow";
 
 export default function Home() {
   return (
-    <div className="pb-10 w-full flex flex-col gap-5 overflow-hidden">
+    <div className="w-full flex flex-col gap-5 overflow-hidden">
       
       {/* First row boxes */}
       <div className="gap-5 grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4">

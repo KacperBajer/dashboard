@@ -1,7 +1,6 @@
 import React from 'react'
 
 const LogsBox = ({props}) => {
-    console.log(props)
   return (
     <div className='flex'>
         <div className='verticalLine'>

@@ -10,9 +10,9 @@ import { nanoid } from 'nanoid'
 const LeftPanel = ({showLeftPanel}) => {
 
   return (
-    <div className={`py-10 px-8 bg-[#f8f9fa] bg-opacity-85 backdrop-blur-lg shadow-2xl  h-screen transform transition-transform duration-300 ease-in-out ${showLeftPanel ? 'translate-x-0' : '-translate-x-full'} 
-    xl:shadow-none xl:bg-opacity-100 xl:bg-transparent xl:backdrop-blur-none xl:block xl:sticky z-30 top-0 xl:translate-x-0`}>
-      <div className='flex flex-col w-[220px] box-content h-full'>
+    <div className={`py-10 bg-[#f8f9fa] bg-opacity-85 backdrop-blur-lg shadow-2xl h-screen transform transition-transform duration-300 ease-in-out ${showLeftPanel ? 'translate-x-0' : '-translate-x-full'} 
+    xl:shadow-none xl:bg-opacity-100 xl:bg-transparent xl:backdrop-blur-none fixed xl:block xl:sticky z-30 top-0 xl:translate-x-0`}>
+      <div className='flex flex-col px-8 w-[220px] box-content h-full overflow-y-auto sb'>
         {/* LOGO */}
         <div className='border-bottom-gradient flex justify-center pb-7 w-full'>
           <div className='flex ml-4 items-center gap-1'>  
@@ -26,7 +26,7 @@ const LeftPanel = ({showLeftPanel}) => {
         </div>
 
         {/* LINKS */}
-        <div className='mt-5 w-auto flex flex-col'>
+        <div className='mt-5 w-auto flex flex-col mb-10'>
             {LinksDashboard.map(item => (
               <Links key={nanoid()} item={item} /> 
             ))}
@@ -34,7 +34,7 @@ const LeftPanel = ({showLeftPanel}) => {
             {LinksAccountPages.map(item => (
               <Links key={nanoid()} item={item} />
             ))}
-        </div>
+        </div>  
         
         {/* BOTTOM SECTION */}
         <div className='mt-auto'>

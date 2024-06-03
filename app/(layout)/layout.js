@@ -10,8 +10,10 @@ const layout = ({children}) => {
 
   return (
     <div className='flex bg-[#f8f9fa] min-h-screen'>
-      <LeftPanel showLeftPanel={showLeftPanel} />
-      <div className='px-6 overflow-x-auto'>
+      <div className=''>
+        <LeftPanel showLeftPanel={showLeftPanel} />
+      </div>
+      <div className='px-6 overflow-x-auto w-full h-full'>
         <TopNav setShowLeftPanel={setShowLeftPanel} />
         {children}
       </div>
